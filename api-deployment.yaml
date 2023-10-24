@@ -51,13 +51,13 @@ spec:
           name: api-app
         livenessProbe:
           httpGet:
-            path: "/health-check"
+            path: "/api/values"
             port: 5000
           initialDelaySeconds: 10
           timeoutSeconds: 5
         readinessProbe:
           httpGet:
-            path: "/health-check"
+            path: "/api/values"
             port: 5000
           initialDelaySeconds: 10
           timeoutSeconds: 5
