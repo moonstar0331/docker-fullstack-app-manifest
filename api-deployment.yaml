@@ -52,12 +52,12 @@ spec:
         livenessProbe:
           httpGet:
             path: "/health-check"
-            port: 8080
+            port: 5000
           initialDelaySeconds: 10
           timeoutSeconds: 5
         readinessProbe:
           httpGet:
             path: "/health-check"
-            port: 8080
+            port: 5000
           initialDelaySeconds: 10
           timeoutSeconds: 5
