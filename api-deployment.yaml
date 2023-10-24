@@ -4,6 +4,8 @@ metadata:
   name: api-service
   labels:
     app: ingress-project
+  annotations:
+    cloud.google.com/neg: '{"ingress": true}'
 spec:
   ports:
     - port: 8080
