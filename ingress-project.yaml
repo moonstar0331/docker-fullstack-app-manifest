@@ -22,16 +22,3 @@ spec:
             name: api-service
             port:
               number: 8080
-
----
-
-apiVersion: cloud.google.com/v1
-kind: BackendConfig
-metadata:
-  name: health-check
-spec:
-  healthCheck:
-    timeoutSec: 1
-    type: HTTP
-    requestPath: /health-check
-    port: 5000
