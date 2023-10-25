@@ -6,6 +6,7 @@ metadata:
     app: ingress-project
   annotations:
     cloud.google.com/neg: '{"ingress": true}'
+    beta.cloud.google.com/backend-config: '{"default": "health-check"}'
 spec:
   ports:
     - port: 8080
