@@ -7,7 +7,7 @@ spec:
     timeoutSec: 1
     type: HTTP
     requestPath: /healthz
-    port: 5000
+    port: 8080
 
 ---
 
@@ -23,7 +23,7 @@ metadata:
 spec:
   ports:
     - port: 8080
-      targetPort: 5000
+      targetPort: 8080
   selector:
     app: ingress-project
     tier: api
@@ -61,5 +61,5 @@ spec:
                 name: mysql-pass
                 key: password
         ports:
-        - containerPort: 5000
+        - containerPort: 8080
           name: api-app
