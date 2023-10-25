@@ -48,5 +48,17 @@ spec:
                 name: mysql-pass
                 key: password
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
           name: api-app
+        livenessProbe:
+          httpGet:
+            path: "/health-check"
+            port: 5000
+          initialDelaySeconds: 10
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: "/health-check"
+            port: 5000
+          initialDelaySeconds: 10
+          timeoutSeconds: 5

@@ -34,4 +34,4 @@ spec:
     timeoutSec: 1
     type: HTTP
     requestPath: /health-check
-    port: 8080
+    port: 5000
