@@ -34,7 +34,7 @@ spec:
         tier: web
     spec:
       containers:
-      - image: moonsungkim/frontend:32
+      - image: moonsungkim/frontend:33
         imagePullPolicy: Always
         name: web-app
         ports:
